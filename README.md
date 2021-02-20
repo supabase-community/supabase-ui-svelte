@@ -13,9 +13,9 @@ UI components for authenticated Supabase using Svelte.
 
 # Storybook
 
-View the components with different settings:
+View the components in action:
 
-https://supabase-ui-svelte.vercel.app
+https://supabase-ui-svelte.vercel.app/?path=/story/auth-auth--default
 
 # Setup
 
