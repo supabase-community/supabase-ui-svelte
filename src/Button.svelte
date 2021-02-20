@@ -1,6 +1,9 @@
 <script>
+  import Icon from './Icon.svelte'
+
   export let block = false
   export let shadow = false
+  export let primary = false
   export let size = 'tiny'
   export let loading = false
   export let icon = null
@@ -11,24 +14,27 @@
   }).join(';')
 </script>
 
-<button class:block class={size} style={styleString} on:click disabled={loading}>
+<button class:block class={size} class:primary style={styleString} on:click disabled={loading}>
   {#if icon}
-    <span class="icon">{icon}</span>
+    <span class="icon">
+      <Icon name={icon} size=21/>
+    </span>
   {/if}
   <span><slot/></span>
 </button>
 
 <style>
   button {
-    background: rgba(101, 217, 165);
-    color: white;
+    color: #444;
     text-shadow: 0px 0px 4px rgb(38 111 78 / 50%);
+    background: none;
 
-    border-color: transparent;
+    border-color: rgba(224, 224, 224);
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
     display: inline-flex;
+    gap: 0.5rem;
     align-items: center;
     position: relative;
     text-align: center;
@@ -40,9 +46,28 @@
     font-weight: inherit;
   }
 
+  button.primary {
+    background: rgba(101, 217, 165);
+    border-color: transparent;
+    color: white;
+  }
+
+  .icon {
+    display: flex;
+  }
+
   button.large {
     font-size: 1rem;
     line-height: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  button.medium {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
