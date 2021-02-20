@@ -48,15 +48,25 @@
 </script>
 
 {#if hasProviders}
-  {#each providers as provider}
-    <Button block shadow size={socialButtonSize} style={buttonStyles[provider]} on:click={() => handleProviderSignIn(provider)}>
-      {#if socialLayout == 'vertical'}
-        Sign up with {provider}
-      {/if}
-    </Button>
-  {/each}
+  <div class="providers">
+    {#each providers as provider}
+      <Button block shadow size={socialButtonSize} style={buttonStyles[provider]} on:click={() => handleProviderSignIn(provider)}>
+        {#if socialLayout == 'vertical'}
+          Sign up with {provider}
+        {/if}
+      </Button>
+    {/each}
+  </div>
 {/if}
 
 {#if error}
   <Text type="danger">{error}</Text>
 {/if}
+
+<style>
+  .providers {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+</style>

@@ -24,3 +24,20 @@
     {/if}
   </div>
 </label>
+
+<style>
+  input {
+    border: none;
+    display: block;
+    flex: 1;
+  }
+  .input {
+    border-radius: 0.375rem;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    display: flex;
+  }
+</style>

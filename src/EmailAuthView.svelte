@@ -38,11 +38,15 @@
 
   {#if view == 'sign_up'}
     <Button block size="large" {loading} icon="inbox">Sign up</Button>
-    <LinkButton on:click={() => view = 'magic_link'}>Sign in with magic link</LinkButton>
-    <LinkButton on:click={() => view = 'sign_in'}>Do you have an account? Sign in</LinkButton>
+    <div class="links">
+      <LinkButton on:click={() => view = 'magic_link'}>Sign in with magic link</LinkButton>
+      <LinkButton on:click={() => view = 'sign_in'}>Do you have an account? Sign in</LinkButton>
+    </div>
   {:else}
     <Button block size="large" {loading} icon="inbox">Sign in</Button>
-    <LinkButton on:click={() => view = 'sign_up'}>Don't have an account? Sign up</LinkButton>
+    <div class="links">
+      <LinkButton on:click={() => view = 'sign_up'}>Don't have an account? Sign up</LinkButton>
+    </div>
   {/if}
 
   {#if message}
@@ -53,3 +57,17 @@
     <Text type="danger">{error}</Text>
   {/if}
 </form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    gap: 0.5rem;
+  }
+</style>
