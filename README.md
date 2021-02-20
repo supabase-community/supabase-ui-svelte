@@ -46,6 +46,43 @@ Add the component anywhere on your page:
 <Auth {supabaseClient}/>
 ```
 
+# Props
+
+## `view`
+
+A `string` that sets which view to display.
+Can be one of `sign_in` | `sign_up` | `magic_link` | `forgotten_password`. Default is `sign_in`.
+
+## `providers`
+
+An array of `string`. Can be any combination of `['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure']`. When left empty, the scial login option is not displayed.
+Default is an empty array.
+
+## `socialButtonSize`
+
+A `string` that specifies the size of the social buttons. Can be one of `tiny` | `small` | `medium` | `large` | `xlarge`.
+Default is `medium`.
+
+## `socialLayout`
+
+A `string` that specifies the layout direction of the social buttons. Valid options are `horizontal` or `vertical`.
+Default is `vertical`.
+
+## `socialColors`
+
+A `boolean` that indicates whether the social buttons should use the brand's colors.
+Default is `false`.
+
+## `class`
+
+A `string` of CSS classes to add to the outermost container.
+Default is empty.
+
+## `style`
+
+A `string` of CSS attributes to add to the outermost container.
+Default is empty.
+
 # License
 
 MIT
