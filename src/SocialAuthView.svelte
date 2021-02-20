@@ -1,38 +1,44 @@
 <script>
   import Button from './Button.svelte'
   import Text from './Text.svelte'
+  import Icon from './Icon.svelte'
 
   export let supabaseClient
   export let providers
   export let socialLayout
   export let socialButtonSize
   export let socialColors
+  export let view
 
   let loading = false, error = ''
 
   const buttonStyles = {
     google: {
-      backgroundColor: '#ce4430',
+      'background-color': '#ce4430',
       color: 'white',
     },
     facebook: {
-      backgroundColor: '#4267B2',
+      'background-color': '#4267B2',
       color: 'white',
     },
     twitter: {
-      backgroundColor: '#1DA1F2',
+      'background-color': '#1DA1F2',
     },
     gitlab: {
-      backgroundColor: '#FC6D27',
+      'background-color': '#FC6D27',
     },
     github: {
-      backgroundColor: '#333',
+      'background-color': '#333',
       color: 'white',
     },
     bitbucket: {
-      backgroundColor: '#205081',
+      'background-color': '#205081',
       color: 'white',
     },
+    azure: {
+      'background-color': '#0072c6',
+      color: 'white',
+    }
   }
 
   $: hasProviders = providers && providers.length > 0
