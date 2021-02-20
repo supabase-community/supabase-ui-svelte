@@ -40,7 +40,7 @@ import { createClient } from '@supabase/supabase-js'
 const supabaseClient = createClient('<your supabase url>', '<your supabase key>')
 ```
 
-Add the component anywhere on you page:
+Add the component anywhere on your page:
 
 ```js
 <Auth {supabaseClient}/>
