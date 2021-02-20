@@ -2,7 +2,7 @@
   export let type = ""
 </script>
 
-<span class:type>
+<span class:danger={type=='danger'}>
   <slot/>
 </span>
 
