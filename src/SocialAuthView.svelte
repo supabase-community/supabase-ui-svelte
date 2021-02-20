@@ -48,14 +48,17 @@
 </script>
 
 {#if hasProviders}
-  <div class="providers">
+  <span class="heading">{view == 'sign_up' ? 'Sign up' : 'Sign in'} with</span>
+
+  <div class="providers" class:horizontal={socialLayout == 'horizontal'}>
     {#each providers as provider}
-      <Button block shadow size={socialButtonSize} style={buttonStyles[provider]} on:click={() => handleProviderSignIn(provider)}>
-        {#if socialLayout == 'vertical'}
-          Sign up with {provider}
-        {/if}
+      <Button block shadow icon={provider} size={socialButtonSize} style={socialColors ? buttonStyles[provider] : {}} on:click={() => handleProviderSignIn(provider)}>
+        {#if socialLayout == 'vertical'}{view == 'sign_up' ? 'Sign up' : 'Sign in'} with {provider}{/if}
       </Button>
     {/each}
+  </div>
+  <div role="seperator" class="divider">
+    <span>or continue with</span>
   </div>
 {/if}
 
@@ -68,5 +71,40 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+  }
+
+  .providers.horizontal {
+    flex-direction: row;
+  }
+
+  .divider {
+    color: rgb(187, 187, 187);
+    margin: 1rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+
+  .divider span {
+    margin: 1rem;
+  }
+
+  .divider::before, .divider::after {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    top: 50%;
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 50%;
+  }
+
+  .heading {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0 0 0.5rem 0;
   }
 </style>

@@ -24,6 +24,7 @@
       {socialLayout}
       {socialButtonSize}
       {socialColors}
+      {view}
     />
 
     {#if view == 'sign_in' || view == 'sign_up'}
