@@ -1,4 +1,6 @@
 <script>
+  import Icon from './Icon.svelte'
+
   export let name
   export let label
   export let placeholder = ""
@@ -12,7 +14,9 @@
 
   <div class="input">
     {#if icon}
-      <span class="icon">{icon}</span>
+      <span class="icon">
+        <Icon name={icon} size=21/>
+      </span>
     {/if}
 
     {#if type == "text"}
@@ -26,15 +30,32 @@
 </label>
 
 <style>
+  label {
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 1rem;
+  }
   input {
     border: none;
+    background: transparent;
     display: block;
     flex: 1;
+  }
+  input:focus {
+    outline: none;
+  }
+  .icon {
+    color: #ccc;
   }
   .input {
     border-radius: 0.375rem;
     border-style: solid;
     border-width: 1px;
+    border-color: #ccc;
     box-sizing: border-box;
     font-size: 0.875rem;
     line-height: 1.25rem;
