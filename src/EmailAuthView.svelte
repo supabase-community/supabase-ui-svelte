@@ -6,10 +6,11 @@
 
   export let supabaseClient
   export let view
+  export let setView
 
-  let error = '', message = '', loading = false, email = "", password = ""
+  let error = '', message = '', loading = false, email = '', password = ''
 
-  async function submit(e) {
+  async function submit() {
     error = ''
     message = ''
     loading = true
@@ -39,13 +40,13 @@
   {#if view == 'sign_up'}
     <Button block primary size="large" {loading} icon="inbox">Sign up</Button>
     <div class="links">
-      <LinkButton on:click={() => view = 'magic_link'}>Sign in with magic link</LinkButton>
-      <LinkButton on:click={() => view = 'sign_in'}>Do you have an account? Sign in</LinkButton>
+      <LinkButton on:click={() => setView('magic_link')}>Sign in with magic link</LinkButton>
+      <LinkButton on:click={() => setView('sign_in')}>Do you have an account? Sign in</LinkButton>
     </div>
   {:else}
     <Button block primary size="large" {loading} icon="inbox">Sign in</Button>
     <div class="links">
-      <LinkButton on:click={() => view = 'sign_up'}>Don't have an account? Sign up</LinkButton>
+      <LinkButton on:click={() => setView('sign_up')}>Don't have an account? Sign up</LinkButton>
     </div>
   {/if}
 

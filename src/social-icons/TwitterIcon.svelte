@@ -8,7 +8,7 @@
   focusable="false"
   data-prefix="fab"
   data-icon="twitter"
-  className="svg-inline--fa fa-twitter fa-w-16"
+  class="svg-inline--fa fa-twitter fa-w-16"
   role="img"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"

@@ -5,11 +5,11 @@
   import Input from './Input.svelte'
 
   export let supabaseClient
-  export let view
+  export let setView
 
-  let error = '', message = '', loading = false, email = ""
+  let error = '', message = '', loading = false, email = ''
 
-  async function submit(e) {
+  async function submit() {
     error = ''
     message = ''
     loading = true
@@ -29,7 +29,7 @@
   <Input name="email" type="email" label="Email address" placeholder="Your email address" icon="mail" bind:value={email}/>
   <Button block primary size="large" {loading} icon="inbox">Send magic link</Button>
 
-  <LinkButton on:click={() => view = 'sign_in'}>Sign in with password</LinkButton>
+  <LinkButton on:click={() => setView('sign_in')}>Sign in with password</LinkButton>
 
   {#if message}
     <Text>{message}</Text>

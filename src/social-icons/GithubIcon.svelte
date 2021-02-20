@@ -8,7 +8,7 @@
   focusable="false"
   data-prefix="fab"
   data-icon="github"
-  className="svg-inline--fa fa-github fa-w-16"
+  class="svg-inline--fa fa-github fa-w-16"
   role="img"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 496 512"

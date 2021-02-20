@@ -1,5 +1,5 @@
 <script>
-  export let type = ""
+  export let type = ''
 </script>
 
 <span class:danger={type=='danger'}>

@@ -1,4 +1,4 @@
-import Auth from '../../src/Component.svelte';
+import Auth from '../../src/Component.svelte'
 import { createClient } from '@supabase/supabase-js'
 
 const supabaseClient = createClient(
@@ -35,49 +35,49 @@ export default {
       }
     }
   },
-};
+}
 
-const Template = ({ onClick, ...args }) => ({
+const Template = (args) => ({
   Component: Auth,
   props: { ...args, supabaseClient }
-});
+})
 
-export const Default = Template.bind({});
+export const Default = Template.bind({})
 Default.args = {
-};
+}
 
-export const WithSocialAuth = Template.bind({});
+export const WithSocialAuth = Template.bind({})
 WithSocialAuth.args = {
   providers: ['facebook', 'google']
-};
+}
 
-export const WithAllSocialAuth = Template.bind({});
+export const WithAllSocialAuth = Template.bind({})
 WithAllSocialAuth.args = {
   providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure'],
-};
+}
 
-export const WithSocialLargeButtons = Template.bind({});
+export const WithSocialLargeButtons = Template.bind({})
 WithSocialLargeButtons.args = {
   providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure'],
   socialButtonSize: 'large'
-};
+}
 
-export const WithColoredSocialAuth = Template.bind({});
+export const WithColoredSocialAuth = Template.bind({})
 WithColoredSocialAuth.args = {
   socialColors: true,
   providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure'],
-};
+}
 
-export const WithSocialAuthHorizontal = Template.bind({});
+export const WithSocialAuthHorizontal = Template.bind({})
 WithSocialAuthHorizontal.args = {
   providers: ['facebook', 'google', 'twitter'],
   socialLayout: 'horizontal',
-};
+}
 
-export const UpdatePassword = Template.bind({});
+export const UpdatePassword = Template.bind({})
 UpdatePassword.args = {
-};
+}
 
-export const ChangeViewState = Template.bind({});
+export const ChangeViewState = Template.bind({})
 ChangeViewState.args = {
-};
+}

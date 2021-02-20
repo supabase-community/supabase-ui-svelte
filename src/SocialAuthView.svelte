@@ -1,7 +1,6 @@
 <script>
   import Button from './Button.svelte'
   import Text from './Text.svelte'
-  import Icon from './Icon.svelte'
 
   export let supabaseClient
   export let providers
@@ -63,7 +62,7 @@
       </Button>
     {/each}
   </div>
-  <div role="seperator" class="divider">
+  <div role="separator" class="divider">
     <span>or continue with</span>
   </div>
 {/if}

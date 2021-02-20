@@ -3,18 +3,17 @@ module.exports = {
     browser: true,
     es6: true,
     node: true,
-    "cypress/globals": true
   },
-  plugins: ['svelte3', 'cypress'],
-  ignorePatterns: ["__sapper__/", "node_modules/"],
-  extends: "eslint:recommended",
+  plugins: ['svelte3'],
+  ignorePatterns: ['__sapper__/', 'node_modules/', 'dist', 'storybook-static'],
+  extends: 'eslint:recommended',
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
   parserOptions: {
     ecmaVersion: 2019,
-    sourceType: "module"
+    sourceType: 'module'
   },
   overrides: [
     {
@@ -24,20 +23,20 @@ module.exports = {
   ],
   rules: {
     indent: [
-      "error",
+      'error',
       2
     ],
-    "linebreak-style": [
-      "error",
-      "unix"
+    'linebreak-style': [
+      'error',
+      'unix'
     ],
     quotes: [
-      "error",
-      "single"
+      'error',
+      'single'
     ],
     semi: [
-      "error",
-      "never"
+      'error',
+      'never'
     ]
   }
 }

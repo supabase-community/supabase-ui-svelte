@@ -4,7 +4,7 @@
   import MagicLinkView from './MagicLinkView.svelte'
   import ForgottenPasswordView from './ForgottenPasswordView.svelte'
 
-  let classes = ""
+  let classes = ''
 
   export let supabaseClient
   export { classes as class }
@@ -14,6 +14,10 @@
   export let socialButtonSize = 'medium'
   export let providers = []
   export let view = 'sign_in'
+
+  function setView(newView) {
+    view = newView
+  }
 </script>
 
 <div class="component {classes}" {style}>
@@ -28,11 +32,11 @@
     />
 
     {#if view == 'sign_in' || view == 'sign_up'}
-      <EmailAuthView {supabaseClient} bind:view/>
+      <EmailAuthView {supabaseClient} {view} {setView}/>
     {:else if view == 'magic_link'}
-      <MagicLinkView {supabaseClient} bind:view/>
+      <MagicLinkView {supabaseClient} {setView}/>
     {:else if view == 'forgotten_password'}
-      <ForgottenPasswordView {supabaseClient} bind:view/>
+      <ForgottenPasswordView {supabaseClient} {setView}/>
     {/if}
   </div>
 </div>
