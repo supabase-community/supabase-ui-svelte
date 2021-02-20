@@ -5,7 +5,7 @@ UI components for authenticated Supabase using Svelte.
 
 # Supported Features
 
-- 8 OAUTH providers
+- Many OAUTH providers: Google, Facebook, Twitter, Github, Azure, Gitlab, Bitbucket
 - Login and signup with email/password
 - Login with magic link
 - Password recovery
