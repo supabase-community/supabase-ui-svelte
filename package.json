@@ -1,5 +1,5 @@
 {
-  "name": "SvelteComponent",
+  "name": "supabase-ui-svelte",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
