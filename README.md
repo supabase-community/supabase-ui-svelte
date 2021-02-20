@@ -59,7 +59,7 @@ Can be one of `sign_in` | `sign_up` | `magic_link` | `forgotten_password`. Defau
 
 ## `providers`
 
-An array of `string`. Can be any combination of `['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure']`. When left empty, the scial login option is not displayed.
+An array of `string`. Can be any combination of `['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure']`. When left empty, the social login option is not displayed.
 Default is an empty array.
 
 ## `socialButtonSize`
