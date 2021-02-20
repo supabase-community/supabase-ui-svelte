@@ -1,7 +1,7 @@
 supabase-ui-svelte
 ------------------
 
-A set of authentication components for handling Supabase. Built using Svelte.
+UI components for authenticated Supabase using Svelte.
 
 # Supported Features
 
