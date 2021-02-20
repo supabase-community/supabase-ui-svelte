@@ -40,23 +40,25 @@
     margin-bottom: 1rem;
   }
   input {
-    border: none;
+    font-size: 0.9rem;
+    font-weight: 300;
     background: transparent;
-    display: block;
-    flex: 1;
-  }
-  input:focus {
-    outline: none;
-  }
-  .icon {
-    color: #ccc;
-  }
-  .input {
     border-radius: 0.375rem;
     border-style: solid;
     border-width: 1px;
     border-color: #ccc;
     box-sizing: border-box;
+    display: block;
+    flex: 1;
+    padding: 5px 3px 8px 35px;
+  }
+  .icon {
+    position: absolute;
+    margin: 7px;
+    color: #ccc;
+  }
+  .input {
+    position: relative;
     font-size: 0.875rem;
     line-height: 1.25rem;
     display: flex;
