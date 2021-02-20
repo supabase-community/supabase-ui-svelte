@@ -48,6 +48,10 @@ Add the component anywhere on your page:
 
 # Props
 
+## `supabaseClient`
+
+Required. This is the supabase client object. Call `createClient()` to get it.
+
 ## `view`
 
 A `string` that sets which view to display.
