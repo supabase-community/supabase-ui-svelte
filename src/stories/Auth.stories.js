@@ -53,24 +53,24 @@ WithSocialAuth.args = {
 
 export const WithAllSocialAuth = Template.bind({});
 WithAllSocialAuth.args = {
-  providers: ['facebook', 'google', 'github', 'gitlab', 'bitbucket', 'azure'],
+  providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure'],
 };
 
 export const WithSocialLargeButtons = Template.bind({});
 WithSocialLargeButtons.args = {
-  providers: ['facebook', 'google', 'github', 'gitlab', 'bitbucket', 'azure'],
+  providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure'],
   socialButtonSize: 'large'
 };
 
 export const WithColoredSocialAuth = Template.bind({});
 WithColoredSocialAuth.args = {
   socialColors: true,
-  providers: ['facebook', 'google', 'github', 'gitlab', 'bitbucket', 'azure'],
+  providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure'],
 };
 
 export const WithSocialAuthHorizontal = Template.bind({});
 WithSocialAuthHorizontal.args = {
-  providers: ['facebook', 'google'],
+  providers: ['facebook', 'google', 'twitter'],
   socialLayout: 'horizontal',
 };
 
