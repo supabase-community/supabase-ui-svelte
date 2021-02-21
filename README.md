@@ -15,7 +15,7 @@ UI components for Supabase authentication using Svelte. Inspired by the [React v
 
 View the components in action:
 
-https://supabase-ui-svelte.vercel.app/?path=/story/auth-auth--default
+[supabase-ui-svelte.vercel.app](https://supabase-ui-svelte.vercel.app/?path=/story/auth-auth--default)
 
 # Setup
 
