@@ -1,4 +1,4 @@
-import Auth from '../../src/Component.svelte'
+import Auth from '../../src/Auth.svelte'
 import { createClient } from '@supabase/supabase-js'
 
 const supabaseClient = createClient(
