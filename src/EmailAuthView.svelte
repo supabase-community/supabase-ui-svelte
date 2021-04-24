@@ -16,13 +16,13 @@
     loading = true
 
     if (view == 'sign_up') {
-      const { error: signUpError } = await supabaseClient.auth.signIn({
+      const { error: signUpError } = await supabaseClient.auth.signUp({
         email, password
       })
 
       if (signUpError) error = signUpError.message
     } else if (view == 'sign_in') {
-      const { error: signInError } = await supabaseClient.auth.signUp({
+      const { error: signInError } = await supabaseClient.auth.signIn({
         email, password
       })
 
