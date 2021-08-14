@@ -24,7 +24,7 @@
     {:else if type == 'email'}
       <input type="email" {name} {placeholder} bind:value>
     {:else if type == 'password'}
-      <input type="password" {name} {placeholder} bind:value>
+      <input type="password" {name} {placeholder} autocomplete="on" bind:value>
     {/if}
   </div>
 </label>
