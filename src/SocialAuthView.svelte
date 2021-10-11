@@ -37,6 +37,10 @@
     azure: {
       'background-color': '#0072c6',
       color: 'white',
+    },
+    discord: {
+      'background-color': '#5865F2',
+      color: 'white',
     }
   }
 
