@@ -7,6 +7,7 @@
   import GitlabIcon from './social-icons/GitlabIcon.svelte'
   import BitbucketIcon from './social-icons/BitbucketIcon.svelte'
   import AzureIcon from './social-icons/AzureIcon.svelte'
+  import DiscordIcon from './social-icons/DiscordIcon.svelte'
 
   const map = {
     mail: MailIcon,
@@ -19,6 +20,7 @@
     gitlab: GitlabIcon,
     bitbucket: BitbucketIcon,
     azure: AzureIcon,
+    discord: DiscordIcon,
   }
 
   export let name
