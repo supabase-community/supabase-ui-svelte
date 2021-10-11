@@ -5,7 +5,7 @@ UI components for Supabase authentication using Svelte. Inspired by the [React v
 
 # Supported Features
 
-- Login via OAUTH providers: Google, Facebook, Twitter, Github, Azure, Gitlab, Bitbucket
+- Login via OAUTH providers: Google, Facebook, Twitter, Github, Azure, Gitlab, Bitbucket, Discord
 - Login and signup via email/password
 - Login via magic link
 - Password recovery
@@ -59,7 +59,7 @@ Can be one of `sign_in` | `sign_up` | `magic_link` | `forgotten_password`. Defau
 
 ## `providers`
 
-An array of `string`. Can be any combination of `['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure', 'discord]`. When left empty, the social login option is not displayed.
+An array of `string`. Can be any combination of `['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure', 'discord']`. When left empty, the social login option is not displayed.
 Default is an empty array.
 
 ## `socialButtonSize`
