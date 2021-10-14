@@ -17,6 +17,7 @@ export interface AuthProps {
   socialLayout?: "vertical" | "horizontal";
   socialColors?: boolean;
   socialButtonSize?: "medium" | "large";
+  redirectTo?: string;
 }
 
 export default class Auth extends SvelteComponentTyped<AuthProps> {}
