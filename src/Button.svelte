@@ -8,18 +8,27 @@
   export let icon = null
   export let style = {}
 
-  $: styleString = Object.entries(style).map(([key, value]) => {
-    return `${key}: ${value}`
-  }).join(';')
+  $: styleString = Object.entries(style)
+    .map(([key, value]) => {
+      return `${key}: ${value}`
+    })
+    .join(';')
 </script>
 
-<button class:block class={size} class:primary style={styleString} on:click disabled={loading}>
+<button
+  class:block
+  class={size}
+  class:primary
+  style={styleString}
+  on:click
+  disabled={loading}
+>
   {#if icon}
     <span class="icon">
-      <Icon name={icon} size=21/>
+      <Icon name={icon} size="21" />
     </span>
   {/if}
-  <span><slot/></span>
+  <span><slot /></span>
 </button>
 
 <style>
@@ -37,7 +46,8 @@
     align-items: center;
     position: relative;
     text-align: center;
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke,
+      opacity, box-shadow, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
     border-radius: 0.25rem;

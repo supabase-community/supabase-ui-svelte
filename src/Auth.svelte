@@ -14,6 +14,7 @@
   export let socialButtonSize = 'medium'
   export let providers = []
   export let view = 'sign_in'
+  export let redirectTo
 
   function setView(newView) {
     view = newView
@@ -29,14 +30,15 @@
       {socialButtonSize}
       {socialColors}
       {view}
+      {redirectTo}
     />
 
     {#if view == 'sign_in' || view == 'sign_up'}
-      <EmailAuthView {supabaseClient} {view} {setView}/>
+      <EmailAuthView {supabaseClient} {view} {setView} {redirectTo} />
     {:else if view == 'magic_link'}
-      <MagicLinkView {supabaseClient} {setView}/>
+      <MagicLinkView {supabaseClient} {setView} {redirectTo} />
     {:else if view == 'forgotten_password'}
-      <ForgottenPasswordView {supabaseClient} {setView}/>
+      <ForgottenPasswordView {supabaseClient} {setView} {redirectTo} />
     {/if}
   </div>
 </div>
