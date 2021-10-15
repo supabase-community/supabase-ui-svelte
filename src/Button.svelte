@@ -2,7 +2,6 @@
   import Icon from './Icon.svelte'
 
   export let block = false
-  export let shadow = false
   export let primary = false
   export let size = 'tiny'
   export let loading = false
