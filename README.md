@@ -1,5 +1,4 @@
-supabase-ui-svelte
-------------------
+## supabase-ui-svelte
 
 UI components for Supabase authentication using Svelte. Inspired by the [React version](https://github.com/supabase/ui).
 

@@ -1,1 +1,1 @@
-export { default as default } from './Auth.svelte'
+export { default } from './Auth.svelte'
