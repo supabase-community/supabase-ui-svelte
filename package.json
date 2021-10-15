@@ -9,7 +9,8 @@
     "prepublishOnly": "npm run build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint . --ext .js,.svelte"
+    "lint": "prettier --ignore-path .prettierignore  --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --ignore-path .prettierignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
