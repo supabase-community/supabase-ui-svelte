@@ -8,22 +8,22 @@ const name = pkg.name
   .replace(/-\w/g, m => m[1].toUpperCase())
 
 export default {
-	input: "src/index.js",
-	output: [
-		{
-			file: pkg.module,
-			sourcemap: true,
-			format: "es",
-		},
-		{
-			file: pkg.main,
-			sourcemap: true,
-			format: "umd",
-			name,
-		},
-	],
-	plugins: [
-		svelte(),
-		resolve()
-	],
-};
+  input: 'src/index.js',
+  output: [
+    {
+      file: pkg.module,
+      sourcemap: true,
+      format: 'es',
+    },
+    {
+      file: pkg.main,
+      sourcemap: true,
+      format: 'umd',
+      name,
+    },
+  ],
+  plugins: [
+    svelte(),
+    resolve()
+  ],
+}
