@@ -8,6 +8,8 @@
   import BitbucketIcon from './social-icons/BitbucketIcon.svelte'
   import AzureIcon from './social-icons/AzureIcon.svelte'
   import DiscordIcon from './social-icons/DiscordIcon.svelte'
+  import SpotifyIcon from './social-icons/SpotifyIcon.svelte'
+  import AppleIcon from './social-icons/AppleIcon.svelte'
 
   const map = {
     mail: MailIcon,
@@ -21,6 +23,8 @@
     bitbucket: BitbucketIcon,
     azure: AzureIcon,
     discord: DiscordIcon,
+    spotify: SpotifyIcon,
+    apple: AppleIcon
   }
 
   export let name

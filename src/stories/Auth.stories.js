@@ -52,24 +52,57 @@ WithSocialAuth.args = {
 
 export const WithAllSocialAuth = Template.bind({})
 WithAllSocialAuth.args = {
-  providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure', 'discord']
+  providers: [
+    'facebook',
+    'google',
+    'twitter',
+    'github',
+    'gitlab',
+    'bitbucket',
+    'azure',
+    'discord',
+    'spotify',
+    'apple'
+  ]
 }
 
 export const WithSocialLargeButtons = Template.bind({})
 WithSocialLargeButtons.args = {
-  providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure', 'discord'],
+  providers: [
+    'facebook',
+    'google',
+    'twitter',
+    'github',
+    'gitlab',
+    'bitbucket',
+    'azure',
+    'discord',
+    'spotify',
+    'apple'
+  ],
   socialButtonSize: 'large'
 }
 
 export const WithColoredSocialAuth = Template.bind({})
 WithColoredSocialAuth.args = {
   socialColors: true,
-  providers: ['facebook', 'google', 'twitter', 'github', 'gitlab', 'bitbucket', 'azure', 'discord']
+  providers: [
+    'facebook',
+    'google',
+    'twitter',
+    'github',
+    'gitlab',
+    'bitbucket',
+    'azure',
+    'discord',
+    'spotify',
+    'apple'
+  ]
 }
 
 export const WithSocialAuthHorizontal = Template.bind({})
 WithSocialAuthHorizontal.args = {
-  providers: ['facebook', 'google', 'twitter'],
+  providers: ['facebook', 'google', 'twitter', 'spotify'],
   socialLayout: 'horizontal'
 }
 
