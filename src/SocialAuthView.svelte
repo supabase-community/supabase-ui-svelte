@@ -41,6 +41,14 @@
     discord: {
       'background-color': '#5865F2',
       color: 'white',
+    },
+    spotify: {
+      'background-color': '#000000',
+      color: 'white'
+    },
+    apple: {
+      'background-color': '#ffffff',
+      color: 'black'
     }
   }
 
