@@ -4,7 +4,7 @@ UI components for Supabase authentication using Svelte. Inspired by the [React v
 
 # Supported Features
 
-- Login via OAUTH providers: Google, Facebook, Twitter, Github, Azure, Gitlab, Bitbucket, Discord
+- Login via OAUTH providers: Google, Facebook, Twitter, Github, Azure, Gitlab, Bitbucket, Discord, Spotify, Apple
 - Login and signup via email/password
 - Login via magic link
 - Password recovery
