@@ -8,10 +8,7 @@
   export let setView
   export let redirectTo
 
-  let error = '',
-    message = '',
-    loading = false,
-    email = ''
+  let error = '', message = '', loading = false, email = ''
 
   async function submit() {
     error = ''
@@ -20,33 +17,23 @@
 
     const { error: err } = await supabaseClient.auth.api.resetPasswordForEmail(
       email,
-      {
-        redirectTo,
-      }
+      { redirectTo }
     )
 
-    if (err) error = err.message
-    else message = 'Check your email for the password reset link'
+    if (err)
+      error = err.message
+    else
+      message = 'Check your email for the password reset link'
 
     loading = false
   }
 </script>
 
 <form on:submit|preventDefault={submit}>
-  <Input
-    name="email"
-    type="email"
-    label="Email address"
-    placeholder="Your email address"
-    icon="mail"
-    bind:value={email}
-  />
-  <Button block primary size="large" {loading} icon="inbox"
-    >Send reset password instructions</Button
-  >
+  <Input name="email" type="email" label="Email address" placeholder="Your email address" icon="mail" bind:value={email}/>
+  <Button block primary size="large" {loading} icon="inbox">Send reset password instructions</Button>
 
-  <LinkButton on:click={() => setView('sign_in')}>Go back to sign in</LinkButton
-  >
+  <LinkButton on:click={() => setView('sign_in')}>Go back to sign in</LinkButton>
 
   {#if message}
     <Text>{message}</Text>

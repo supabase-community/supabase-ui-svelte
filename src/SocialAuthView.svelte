@@ -10,8 +10,7 @@
   export let view
   export let redirectTo
 
-  let loading = false,
-    error = ''
+  let loading = false, error = ''
 
   const buttonStyles = {
     google: {
@@ -43,7 +42,7 @@
     discord: {
       'background-color': '#5865F2',
       color: 'white',
-    },
+    }
   }
 
   $: hasProviders = providers && providers.length > 0
@@ -66,17 +65,8 @@
 
   <div class="providers" class:horizontal={socialLayout == 'horizontal'}>
     {#each providers as provider}
-      <Button
-        block
-        shadow
-        icon={provider}
-        size={socialButtonSize}
-        style={socialColors ? buttonStyles[provider] : {}}
-        on:click={() => handleProviderSignIn(provider)}
-      >
-        {#if socialLayout == 'vertical'}{view == 'sign_up'
-            ? 'Sign up'
-            : 'Sign in'} with {provider}{/if}
+      <Button block shadow icon={provider} size={socialButtonSize} style={socialColors ? buttonStyles[provider] : {}} on:click={() => handleProviderSignIn(provider)}>
+        {#if socialLayout == 'vertical'}{view == 'sign_up' ? 'Sign up' : 'Sign in'} with {provider}{/if}
       </Button>
     {/each}
   </div>
@@ -114,12 +104,11 @@
     margin: 1rem;
   }
 
-  .divider::before,
-  .divider::after {
+  .divider::before, .divider::after {
     border-bottom-style: solid;
     border-bottom-width: 1px;
     top: 50%;
-    content: "";
+    content: '';
     position: relative;
     display: inline-block;
     width: 50%;
