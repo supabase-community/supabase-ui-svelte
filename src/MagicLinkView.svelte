@@ -6,6 +6,7 @@
 
   export let supabaseClient
   export let setView
+  export let redirectTo
 
   let error = '', message = '', loading = false, email = ''
 
@@ -14,7 +15,10 @@
     message = ''
     loading = true
 
-    const { error: err } = await supabaseClient.auth.signIn({ email })
+    const { error: err } = await supabaseClient.auth.signIn(
+      { email },
+      { redirectTo }
+    )
 
     if (err)
       error = err.message

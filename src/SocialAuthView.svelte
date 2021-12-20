@@ -8,6 +8,7 @@
   export let socialButtonSize
   export let socialColors
   export let view
+  export let redirectTo
 
   let loading = false, error = ''
 
@@ -49,7 +50,10 @@
   async function handleProviderSignIn(provider) {
     loading = true
 
-    const { error: signInError } = await supabaseClient.auth.signIn({ provider })
+    const { error: signInError } = await supabaseClient.auth.signIn(
+      { provider },
+      { redirectTo }
+    )
     if (signInError) error = signInError.message
 
     loading = false
