@@ -25,7 +25,6 @@
 <style>
   button {
     color: #444;
-    text-shadow: 0px 0px 4px rgb(38 111 78 / 50%);
     background: none;
 
     border-color: rgba(224, 224, 224);
