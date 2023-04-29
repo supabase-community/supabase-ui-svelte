@@ -7,6 +7,7 @@
   export let supabaseClient
   export let view
   export let setView
+  export let magicLink;
 
   let error = '', message = '', loading = false, email = '', password = ''
 
@@ -40,7 +41,9 @@
   {#if view == 'sign_up'}
     <Button block primary size="large" {loading} icon="inbox">Sign up</Button>
     <div class="links">
-      <LinkButton on:click={() => setView('magic_link')}>Sign in with magic link</LinkButton>
+      {#if magicLink === true}
+        <LinkButton on:click={() => setView('magic_link')}>Sign in with magic link</LinkButton>
+      {/if}
       <LinkButton on:click={() => setView('sign_in')}>Do you have an account? Sign in</LinkButton>
     </div>
   {:else}

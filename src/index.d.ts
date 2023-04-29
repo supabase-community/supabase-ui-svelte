@@ -10,6 +10,7 @@ export interface AuthProps {
   socialLayout?: 'vertical' | 'horizontal'
   socialColors?: boolean
   socialButtonSize?: 'medium' | 'large'
+  magicLink?: boolean
 }
 
 export default class Auth extends SvelteComponentTyped<AuthProps> {}

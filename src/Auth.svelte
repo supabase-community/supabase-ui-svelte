@@ -14,6 +14,7 @@
   export let socialButtonSize = 'medium'
   export let providers = []
   export let view = 'sign_in'
+  export let magicLink = false;
 
   function setView(newView) {
     view = newView
@@ -32,7 +33,7 @@
     />
 
     {#if view == 'sign_in' || view == 'sign_up'}
-      <EmailAuthView {supabaseClient} {view} {setView}/>
+      <EmailAuthView {supabaseClient} {view} {setView} {magicLink}/>
     {:else if view == 'magic_link'}
       <MagicLinkView {supabaseClient} {setView}/>
     {:else if view == 'forgotten_password'}

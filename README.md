@@ -71,6 +71,11 @@ Default is `medium`.
 A `string` that specifies the layout direction of the social buttons. Valid options are `horizontal` or `vertical`.
 Default is `vertical`.
 
+## `magicLink`
+
+A `boolean` that specifies whether to show the magic link option on the sign-up page. 
+Default is `false`.
+
 ## `socialColors`
 
 A `boolean` that indicates whether the social buttons should use the brand's colors.
